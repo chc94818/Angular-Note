@@ -1,0 +1,16 @@
+<h3>Data Binding</h3>
+<div>{{stringImterpolationValue}}</div>
+<div>{{getStringImterpolationValue()}}</div>
+<div [id]="idBinding">property binding</div>
+<div [id]="getIdBindingString()">property binding from function</div>
+
+<div>
+  <button (click)="onClick()">event binding for onClick</button>
+  <div>click nums: {{clickNum}}</div>
+</div>
+
+<div>
+  <div>two way data binding</div>
+  <input [(ngModel)]="twoWayValue">
+  <div>input value: {{twoWayValue}}</div>
+</div>
