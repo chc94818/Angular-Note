@@ -1,0 +1,36 @@
+<div style="border: solid 1px black">
+  <p>Structural Directive sample</p>
+  <p *ngIf="show1">Content to render when show1 is true.</p>
+  <p *ngIf="show2">Content to render when show2 is true.</p>
+  <p *ngIf="show2; else elseShow">Content to render when show2 is true.</p>
+  <ng-template #elseShow>show this when show 2 is false </ng-template>
+  <ul>
+    <li *ngFor="let item of list">{{ item }}</li>
+  </ul>
+  <ul>
+    <li *ngFor="let user of users; index as i; first as isFirst">
+      {{i}}/{{users.length}}. {{user}} <span *ngIf="isFirst">default</span>
+    </li>
+  </ul>
+</div>
+
+<div style="border: solid 1px black">
+  <p [style.background-color]= "'yellow'">yellow color</p>
+  <p [style.font-size.px] = "32">font size 32</p>
+  <p [ngStyle]="{color: 'white', 'background-color': 'blue'}"> ngStyle content</p>
+  <p appHighlight > Porperty Directive sample</p>
+  <p appHighlight highlightColor="yellow">Highlighted in yellow</p>
+  <p appHighlight [highlightColor]="'orange'">Highlighted in orange</p>
+  <p [appHighlight]="'red'">Highlight me !</p>
+  <p appHighlight="red">Highlight me !</p>
+
+    <h1>My First Attribute Directive</h1>
+
+  <h4>Pick a highlight color</h4>
+  <div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  </div>
+  <p appHighlight [highlightColor]="color">Highlight me with the input color!</p>
+</div>
