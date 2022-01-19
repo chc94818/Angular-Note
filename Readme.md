@@ -5,3 +5,4 @@ Angular 是一個基於 TypeScript 的開源 Web 應用框架，由 Google 的 A
 ## 閱讀順序
 - my-first-app
 - DataBinding
+- Directive
