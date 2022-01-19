@@ -161,7 +161,7 @@ Directives 能夠用來指定 DOM 需要被如何操作，其中又區分成三�
   @Input() appHighlight: string;
   ```
 
-- 配合其他參數來動態的修改屬性的值可以配合如 input:
+- 配合其他參數來動態的修改屬性的值，如 input:
   ```
   // in app.component.html
   // bind the onClick event to assign the selected color
